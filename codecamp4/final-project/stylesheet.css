@@ -3,21 +3,17 @@ body, input, div .editable > ul > li {
   font-size: larger;
 }
 
-input {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-
 header {
   text-align: center;
-  width: 100%
+  width: 100%;
 }
 
 label {
   width: 100px;
   text-align: right;
-  display: inline-grid
+  display: inline-grid;
+  height: auto;
+  vertical-align: middle;
 }
 
 .profile-form {
@@ -34,6 +30,10 @@ div .editable {
   background-color: rgb(235, 235, 228);
   text-align: left;
 }
+.profile-form input {
+  vertical-align: middle;
+  height: auto;
+}
 
 .profile-form div .editable, .profile-form input {
   border: none;
@@ -41,7 +41,6 @@ div .editable {
   display: inline-flex;
   width: 450px;
   padding-left: 5px;
-  vertical-align: middle;
   /*padding-right: 5px;*/
 }
 
@@ -56,17 +55,19 @@ div .editable {
   -ms-flex-direction: column;
   flex-direction: column;
   flex: 0 1 auto;
-  min-width: 0;
+  min-width: 135px;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  /*max-width: 800px;*/
+  /*max-width: 600px;*/
 }
 
 
 .card-header {
   /*padding: 0.75rem 1.25rem;*/
+  height: auto;
+  line-height: 10px;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -79,8 +80,12 @@ div .editable {
 }
 
 @media (max-width: 575px) {
-  .card, .card-header, .card-body {
+  .card {
     max-width: 500px
+  }
+
+  .card-header, .card-body {
+    width: 100%
   }
 
   .profile-form label {
@@ -104,7 +109,7 @@ div .editable {
   }
 
   .card-header, .card-body {
-    width: 500px;
+    width: 100%;
   }
 
   .profile-form div .editable, input {
@@ -113,9 +118,6 @@ div .editable {
   .profile-form label {
     width: 450px;
     text-align: left;
-  }
-
-  header {
   }
 }
 
@@ -133,15 +135,20 @@ div .editable {
     margin: auto;
   }
 
+  .profile-form div .editable, input {
+  }
+
   .profile-form label {
     width: 450px;
     text-align: left;
   }
+
 }
 
 @media (min-width: 992px) {
   .card {
-    max-width: 80%;
+    max-width: 800px;
+    width: 85%;
     margin: auto;
   }
 
@@ -149,24 +156,38 @@ div .editable {
     width: 100%
   }
 
+  .profile-form div .editable, .profile-form input {
+    width: 600px;
+    font-size: x-large;
+  }
+
   .profile-form label {
-    width: 100px;
     text-align: right;
+    font-size: x-large;
+    width: 150px;
   }
 }
 
 @media (min-width: 1200px) {
   .card {
-    max-width: 80%;
+    max-width: 800px;
+    width: 65%;
     margin: auto;
   }
 
   .card-header, .card-body {
-    width: 100%
+    width: 100%;
+    font-size: xx-large;
   }
 
+  .profile-form div .editable, .profile-form input {
+    height: auto;
+    width: 600px;
+    font-size: xx-large;
+  }
   .profile-form label {
-    width: 100px;
+    font-size: xx-large;
+    width: 150px;
     text-align: right;
   }
 }
