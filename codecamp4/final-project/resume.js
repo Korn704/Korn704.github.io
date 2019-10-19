@@ -33,7 +33,7 @@ const editOrRemoveSkill = () => {
 
   for (let i = 0; i < liSkillItems.length; i++) {
     liSkillItems.item(i).innerHTML += `
-      <button type="button" class onclick="editSkill(parentElement.id)">&#x270E;</button> 
+      <button type="button" onclick="editSkill(parentElement.id)">&#x270E;</button> 
       <button type="button" onclick="removeSkill(parentElement.id)">&#x2718;</button>`;
   }
 };
@@ -58,21 +58,21 @@ const saveEducation = (text) => {
 };
 
 const editSkill = (id) => {
-  const skill = prompt('Edit skill from ' + id + ' to...', id);
   const li = document.getElementById(id);
-  // const txtEditSkill = document.createElement('input');
-  // txtEditSkill.value = id;
 
   clearSkillButton();
 
-  // li.innerHTML = '<input value="parentNode.innerText"/>';
-  // console.log(li.innerHTML)
-  if (skill === null) {
+  li.innerHTML = '<input id="txt-edit-skill" style="width:100%"/>';
 
-  } else {
-    li.innerHTML = skill;
-  }
-  // li.innerText = txtEditSkill.value;
+  const txtEditSkill = document.getElementById('txt-edit-skill');
+  txtEditSkill.value = li.id;
+  txtEditSkill.select();
+  txtEditSkill.addEventListener('keyup', event => {
+    if (event.keyCode == 0x0D) {
+      li.id = txtEditSkill.value;
+      li.innerHTML = txtEditSkill.value;
+    }
+  });
 };
 
 const removeSkill = (id) => {
