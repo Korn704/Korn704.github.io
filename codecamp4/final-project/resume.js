@@ -28,6 +28,9 @@ const editOrRemoveSkill = () => {
   btnEditSkill.disabled = true;
 
   let liSkillItems = document.getElementsByClassName('skill-li');
+
+  console.log(liSkillItems.length);
+
   for (let i = 0; i < liSkillItems.length; i++) {
     liSkillItems.item(i).innerHTML += `
       <button type="button" class onclick="editSkill(parentElement.id)">&#x270E;</button> 
@@ -55,11 +58,21 @@ const saveEducation = (text) => {
 };
 
 const editSkill = (id) => {
-  const skill = prompt('Edit skill from ' + id + ' to...');
+  const skill = prompt('Edit skill from ' + id + ' to...', id);
   const li = document.getElementById(id);
+  // const txtEditSkill = document.createElement('input');
+  // txtEditSkill.value = id;
 
   clearSkillButton();
-  li.innerText = skill;
+
+  // li.innerHTML = '<input value="parentNode.innerText"/>';
+  // console.log(li.innerHTML)
+  if (skill === null) {
+
+  } else {
+    li.innerHTML = skill;
+  }
+  // li.innerText = txtEditSkill.value;
 };
 
 const removeSkill = (id) => {
@@ -72,17 +85,19 @@ const addSkill = () => {
   const newSkill = prompt('Insert new skill');
   const newLi = document.createElement('li');
   newLi.setAttribute('id', newSkill);
+  newLi.classList.add('skill-li');
   newLi.innerHTML = newSkill;
 
   const ul = document.getElementById('skill-ul');
-  ul.appendChild(newLi);
+  if (newSkill === null) return;
+  else ul.appendChild(newLi);
 };
 
 const clearSkillButton = () => {
   let btnEditSkill = document.getElementById('btn-edit-skill');
   btnEditSkill.disabled = false;
 
-  const liSkillItems = document.getElementsByClassName('skill-li')
+  const liSkillItems = document.getElementsByClassName('skill-li');
   for (let i = 0; i < liSkillItems.length; i++) {
     const skillLi = liSkillItems.item(i).innerHTML;
     const thisSkill = skillLi.split('<button ')[0];
