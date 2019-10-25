@@ -1,5 +1,5 @@
 body, input, div .editable > ul > li {
-  font-family: 'Niconne', cursive;
+  font-family: 'Teko', cursive;
   font-size: larger;
 }
 
@@ -15,7 +15,6 @@ label {
   height: auto;
   vertical-align: middle;
 }
-
 
 #btn-add-skill, #btn-edit-skill, #btn-edit-name {
   margin: 5px;

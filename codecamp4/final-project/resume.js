@@ -34,7 +34,8 @@ const editOrRemoveSkill = () => {
   for (let i = 0; i < liSkillItems.length; i++) {
     liSkillItems.item(i).innerHTML += `
       <button type="button" onclick="editSkill(parentElement.id)">&#x270E;</button> 
-      <button type="button" onclick="removeSkill(parentElement.id)">&#x2718;</button>`;
+      <button type="button" onclick="removeSkill(parentElement.id)">&#x2718;</button>
+    `;
   }
 };
 
