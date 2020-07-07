@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{Miyk:function(n,i,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/education",function(){return t("nqIs")}])},nqIs:function(n,i,t){"use strict";t.r(i);var e=t("q1tI"),u=t.n(e),o=t("hiX1"),c=u.a.createElement;i.default=function(n){return c("div",null,c(o.a,{level:4},"Education"))}}},[["Miyk",0,1,2,3,4]]]);

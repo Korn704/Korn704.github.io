@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{NGP1:function(n,e,o){"use strict";o.r(e);var t=o("q1tI"),i=o.n(t),u=o("hiX1"),w=i.a.createElement;e.default=function(n){return w("div",null,w(u.a,{level:1},"Work"))}},sIsM:function(n,e,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/work",function(){return o("NGP1")}])}},[["sIsM",1,2,0,3,4]]]);
