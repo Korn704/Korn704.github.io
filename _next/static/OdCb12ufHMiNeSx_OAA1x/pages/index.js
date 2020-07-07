@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"/EDR":function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return t("23aj")}])},"23aj":function(n,e,t){"use strict";t.r(e);var o=t("q1tI"),a=t.n(o),u=t("hiX1"),i=a.a.createElement;e.default=function(n){return i(a.a.Fragment,null,i(u.a,{level:1},"Hello World"))}}},[["/EDR",1,2,0,3,4]]]);
